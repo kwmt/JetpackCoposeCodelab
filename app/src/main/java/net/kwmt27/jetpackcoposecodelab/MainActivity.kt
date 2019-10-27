@@ -47,6 +47,7 @@ fun MyScreenContent(appState: AppState = AppState()) {
         Greeting(name = "there")
         Divider(color = Color.Transparent, height = 32.dp)
         Counter(appState.counterState)
+        Form(appState.formState)
     }
 }
 
@@ -58,7 +59,7 @@ fun Greeting(name: String) {
 @Model
 class CounterState(var count: Int = 0)
 
-class AppState(val counterState: CounterState = CounterState())
+class AppState(val counterState: CounterState = CounterState(), val formState: FormState = FormState(false))
 
 @Composable
 fun Counter(state: CounterState) {
