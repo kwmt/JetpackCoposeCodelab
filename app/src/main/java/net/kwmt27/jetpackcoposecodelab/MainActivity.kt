@@ -1,6 +1,7 @@
 package net.kwmt27.jetpackcoposecodelab
 
 import android.os.Bundle
+import android.widget.CheckBox
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.Composable
 import androidx.compose.Model
@@ -11,6 +12,7 @@ import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
 import androidx.ui.layout.Spacing
 import androidx.ui.material.Button
+import androidx.ui.material.Checkbox
 import androidx.ui.material.ContainedButtonStyle
 import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
@@ -66,6 +68,16 @@ fun Counter(state: CounterState) {
             state.count++
         }
     )
+}
+
+@Model
+class FormState(var optionChecked: Boolean)
+
+@Composable
+fun Form(formState: FormState) {
+    Checkbox(checked = formState.optionChecked, onCheckedChange = { newState ->
+        formState.optionChecked = newState
+    })
 }
 
 val myNames = listOf("Manuel", "Nick", "Jose", "Florina", "Yacine")
