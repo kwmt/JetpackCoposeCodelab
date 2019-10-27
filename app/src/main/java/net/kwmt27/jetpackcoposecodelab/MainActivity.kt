@@ -46,10 +46,10 @@ fun Greeting(name: String) {
     Text(text = "Hello $name!", modifier = Spacing(24.dp))
 }
 
-@Preview
+@Preview("Text Preview")
 @Composable
 fun DefaultPreview() {
-    MaterialTheme {
+    MyApp {
         Greeting("Android")
     }
 }
