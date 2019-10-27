@@ -48,7 +48,6 @@ fun MyScreenContent(appState: AppState = AppState()) {
         Greeting(name = "there")
         Divider(color = Color.Transparent, height = 32.dp)
         Counter(appState.counterState)
-        Form(appState.formState)
     }
 }
 
