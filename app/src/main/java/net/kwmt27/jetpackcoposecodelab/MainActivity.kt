@@ -66,6 +66,7 @@ fun Counter(state: CounterState) {
             state.count++
         }
     )
+}
 
 val myNames = listOf("Manuel", "Nick", "Jose", "Florina", "Yacine")
 
