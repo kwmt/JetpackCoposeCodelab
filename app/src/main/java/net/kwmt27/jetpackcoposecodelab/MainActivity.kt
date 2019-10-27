@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun MyApp(child: @Composable() () -> Unit) {
-    MaterialTheme() {
+    CustomTheme() {
         Surface(color = Color.Yellow) {
             child()
         }
