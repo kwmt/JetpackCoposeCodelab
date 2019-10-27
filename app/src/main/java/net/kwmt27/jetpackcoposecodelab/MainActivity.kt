@@ -33,15 +33,6 @@ fun MyApp(child: @Composable() () -> Unit) {
 }
 
 @Composable
-fun MyApp() {
-    MaterialTheme() {
-        Surface(color = Color.Yellow) {
-            Greeting(name = "Android")
-        }
-    }
-}
-
-@Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!", modifier = Spacing(24.dp))
 }
