@@ -49,10 +49,21 @@ fun Greeting(name: String) {
     Text(text = "Hello $name!", modifier = Spacing(24.dp))
 }
 
+val myNames = listOf("Manuel", "Nick", "Jose", "Florina", "Yacine")
+
+@Composable
+fun MyExampleFunction(names: List<String> = myNames) {
+    Column {
+        for (name in names) {
+            Text(text = name)
+        }
+    }
+}
+
 @Preview("Text Preview")
 @Composable
 fun DefaultPreview() {
     MyApp {
-        MyScreenContent()
+        MyExampleFunction()
     }
 }
