@@ -9,6 +9,8 @@ import androidx.ui.core.setContent
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
 import androidx.ui.layout.Spacing
+import androidx.ui.material.Button
+import androidx.ui.material.ContainedButtonStyle
 import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.surface.Surface
@@ -60,10 +62,29 @@ fun MyExampleFunction(names: List<String> = myNames) {
     }
 }
 
+@Composable
+fun EnabledButton(text: String, enabled: Boolean) {
+    Button(
+        text = text,
+        style = ContainedButtonStyle(
+            color = if (enabled) Color.White else Color.Gray
+        )
+    )
+}
+
+@Composable
+fun MyExampleEnabledButtonList() {
+    Column {
+        myNames.forEachIndexed { index, name ->
+            EnabledButton(text = name, enabled = index % 2 == 0)
+        }
+    }
+}
+
 @Preview("Text Preview")
 @Composable
 fun DefaultPreview() {
     MyApp {
-        MyExampleFunction()
+        MyExampleEnabledButtonList()
     }
 }
