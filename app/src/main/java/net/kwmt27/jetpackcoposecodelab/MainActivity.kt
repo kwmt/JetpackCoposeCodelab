@@ -81,10 +81,10 @@ fun MyExampleEnabledButtonList() {
     }
 }
 
-@Preview("Text Preview")
+@Preview("MyScreen Preview")
 @Composable
 fun DefaultPreview() {
     MyApp {
-        MyExampleEnabledButtonList()
+        MyScreenContent()
     }
 }
