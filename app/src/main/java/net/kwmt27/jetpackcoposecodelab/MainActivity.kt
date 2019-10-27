@@ -10,6 +10,7 @@ import androidx.ui.core.dp
 import androidx.ui.core.setContent
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
+import androidx.ui.layout.CrossAxisAlignment
 import androidx.ui.layout.Spacing
 import androidx.ui.material.Button
 import androidx.ui.material.Checkbox
@@ -41,7 +42,7 @@ fun MyApp(child: @Composable() () -> Unit) {
 
 @Composable
 fun MyScreenContent(appState: AppState = AppState()) {
-    Column {
+    Column(crossAxisAlignment = CrossAxisAlignment.Center) {
         Greeting(name = "Android")
         Divider(color = Color.Black)
         Greeting(name = "there")
